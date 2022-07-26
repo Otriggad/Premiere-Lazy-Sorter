@@ -1,0 +1,5 @@
+01 Media | ".mov", ".avi", ".mp4", ".m4v"
+02 Audio | ".mp3", ".wav"
+03 GFX | ".jpg", ".png", ".psd", ".gif"
+04 Sequences & Nests | $SEQ
+05 MOGRTS | $MOGRT

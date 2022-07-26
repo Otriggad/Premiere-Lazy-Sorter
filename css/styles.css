@@ -1,0 +1,190 @@
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-style: normal;
+    src: url("../fonts/Montserrat-Regular.ttf") format('truetype');
+}
+
+
+
+* {
+	font-family: Montserrat;
+}
+
+html {
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+body {
+	overflow-y: hidden;
+	overflow-x: hidden;
+	color: white;
+	background-color: #212121;
+}
+
+#logoSection {
+	width: 400px;
+	height: 225px;
+}
+
+#previewSection {
+	width: 400px;
+	height: 355px;
+	display: inline-block;
+}
+
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 13px;
+    opacity: 0;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+opacity: 0;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #2e2e2e; 
+    opacity: 0;
+}
+
+F
+::-webkit-scrollbar-button {
+	height: 10px;
+	width: 13px;
+	background: #2e2e2e; 
+	opacity: 0;
+}
+
+::-webkit-scrollbar-button:vertical:increment {
+	width: 13px;
+	opacity: 0;
+}
+
+::-webkit-scrollbar-button:vertical:decrement {
+	width: 13px;
+	opacity: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 40px);
+  grid-template-rows: repeat(3, 40px);
+  grid-gap: 3px;
+  margin: 0 auto;
+}
+
+.cell {
+   /* center the cell content */
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-family: Arial;
+  font-size: 2rem;
+  font-weight: bold;
+  background:  #212121;
+}
+
+.cell:hover {
+  background-color: grey;
+}
+
+.cell:active {
+	background-color: white;
+}
+
+.align-row {
+	display: flex;
+	justify-content: center;
+}
+.align-button {
+	margin: 2px;
+}
+
+.align-button:hover {
+	background: grey;
+}
+
+.align-button:active {
+	background: white;
+
+}
+
+.arrow {
+	filter: invert(70%);
+	 width: 35%;
+	 object-fit: cover;
+}
+
+
+.controllers{
+	margin: 5px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.button {
+
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	border-radius: 3px;
+	font-size: 11px;
+	font-weight: 500;
+	line-height: 16px;
+	padding: 2px 10px;
+	height: 28px;
+	min-width: 32px;
+	min-height: 32px;
+	border: none;
+	color: white;
+	background-color: #2b8ceb;
+	transition: background-color .17s ease,color .17s ease;
+	max-width: 300px;
+	margin: auto;
+	}
+	
+.button :hover {
+	background-color: rgb(71, 82, 196);
+}
+
+.button-grey {
+
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	border-radius: 3px;
+	font-size: 11px;
+	font-weight: 500;
+	line-height: 16px;
+	padding: 2px 10px;
+	height: 28px;
+	min-width: 32px;
+	min-height: 32px;
+	border: none;
+	color: white;
+	background-color: grey;
+	transition: background-color .17s ease,color .17s ease;
+	max-width: 300px;
+	margin: auto;
+	}
+	
+.button-grey :hover {
+	background-color: rgb(71, 82, 196);
+}
+
+.spacer {
+	margin-left: 5px;
+	width: 10px;
+}	
