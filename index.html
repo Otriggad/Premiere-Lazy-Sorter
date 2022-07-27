@@ -48,6 +48,7 @@ document.onmouseup = mousehandler;
 			var newCS = new CSInterface();
 			newCS.evalScript(jsx);		
 		}
+
 		runJSX('loadConfig()')
 		var helpCS = new CSInterface();
 
@@ -55,13 +56,17 @@ document.onmouseup = mousehandler;
 	</script>
 
 	<div class="container">
-		<button class="button" onclick="runJSX('lazySort()');">Lazy Sort</button>
+		<button class="button" onclick="runJSX('lazySort(' + document.getElementById('conformColorCheck').checked.toString() + ')');">Lazy Sort</button>
+	</div>
+	<div class="container">
+	Inherit Bin Color:  <input type="checkbox" id="conformColorCheck">
 	</div>
 	<div class="footer">
 		<button class="button-grey" onclick="runJSX('openConfigDir()');">Conf</button>
 		<button class="button-grey" onclick='(new CSInterface).openURLInDefaultBrowser("https://github.com/Otriggad/Premiere-Lazy-Sorter/blob/main/README.md");'>Help</button>
 	</div>
-	<script>
+	<!-- <script>
+	
 		function getOS() {
 			var userAgent = window.navigator.userAgent,
 			platform = window.navigator.platform,
@@ -75,9 +80,9 @@ document.onmouseup = mousehandler;
 				os = "WIN";
 			}
 			return os;
- 	}
+ 		}
 	
-</script>	
+</script>	 -->
 <!-- 	<script src="js/libs/CSInterface.js"></script> -->
 <!-- 	<script src="js/main.js"></script> -->
 </body>

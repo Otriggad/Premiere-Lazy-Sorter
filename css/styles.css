@@ -74,7 +74,15 @@ F
   display: flex;
   justify-content: center;
   margin: 7px;
+  font-size: 11px;
+
 }
+
+input[type=checkbox], input[type=radio] {
+	vertical-align: middle;
+	position: relative;
+	bottom: 0.2em;
+  }
 
 .footer {
 	display: flex;
