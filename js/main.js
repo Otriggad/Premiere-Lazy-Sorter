@@ -1,4 +1,4 @@
-(function () {
+/* (function () {
  'use strict';
  var path, slash;
  path = location.href;
@@ -29,13 +29,4 @@ function getOS() {
  		return os;
  	}
 
-function pushAnchor(id) {
-	var csInterface = new CSInterface();
-	csInterface.evalScript("applyToSelectedClip(" + id + ")");
-}
-
-function pushAlignment(id) {
-	console.log("push")
-	var csInterface = new CSInterface();
-	csInterface.evalScript("applyAlignToSelectedClip(" + id.slice(-1) + ")");
-}
+ */
