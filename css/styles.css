@@ -73,7 +73,17 @@ F
 .container {
   display: flex;
   justify-content: center;
+  margin: 7px;
+}
 
+.footer {
+	display: flex;
+	align-items: flex-start;
+	position: absolute;
+	left:50%;
+	transform: translate(-50%, -50%);
+	margin: 0 auto;
+	bottom: 0;
 }
 
 .grid {
@@ -168,16 +178,14 @@ F
 	font-size: 11px;
 	font-weight: 500;
 	line-height: 16px;
-	padding: 2px 10px;
+	padding: 7px 10px;
 	height: 28px;
-	min-width: 32px;
-	min-height: 32px;
 	border: none;
 	color: white;
-	background-color: grey;
+	background-color: #323438;
 	transition: background-color .17s ease,color .17s ease;
 	max-width: 300px;
-	margin: auto;
+	margin: 3px;
 	}
 	
 .button-grey :hover {

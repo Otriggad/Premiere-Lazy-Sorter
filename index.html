@@ -5,6 +5,20 @@
 <link rel="stylesheet" href="css/styles.css"/>
 	<title>Lazy Sorter</title>
 	<script>
+
+	// if (document.addEventListener) {
+	// document.addEventListener('contextmenu', function(e) {
+	// 	alert("You've tried to open context menu"); //here you draw your own menu
+	// 	e.preventDefault();
+	// }, false);
+	// } else {
+	// document.attachEvent('oncontextmenu', function() {
+	// 	alert("You've tried to open context menu");
+	// 	window.event.returnValue = false;
+	// });
+	// }
+
+
 var isNS = (navigator.appName == "Netscape") ? 1 : 0;
 
 if(navigator.appName == "Netscape") document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
@@ -35,13 +49,18 @@ document.onmouseup = mousehandler;
 			newCS.evalScript(jsx);		
 		}
 		runJSX('loadConfig()')
+		var helpCS = new CSInterface();
+
+
 	</script>
 
 	<div class="container">
 		<button class="button" onclick="runJSX('lazySort()');">Lazy Sort</button>
-		<button class="button-grey" onclick="runJSX('openConfigDir()');">Conf</button>
 	</div>
-
+	<div class="footer">
+		<button class="button-grey" onclick="runJSX('openConfigDir()');">Conf</button>
+		<button class="button-grey" onclick='(new CSInterface).openURLInDefaultBrowser("https://github.com/Otriggad/Premiere-Lazy-Sorter/blob/main/README.md");'>Help</button>
+	</div>
 	<script>
 		function getOS() {
 			var userAgent = window.navigator.userAgent,
