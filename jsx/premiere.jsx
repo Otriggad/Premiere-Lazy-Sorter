@@ -14,27 +14,22 @@ Array.prototype.indexOf = function (item) {
 //GLOBAL ARRAYS and FLaGS
 var extensions = []
 var binNames = []
-var binContent = []
 var rootBins = []
 var binLabels = []
 
-var CONFORMLABELFLAG = true
-
-
+//DEBUG
 $.writeln("...................")
 
+//Opens directory of config.txt in finder/explorer
 function openConfigDir() {
     var cfgPATH = "~/Documents/LazySort/"
     cfgDir = new Folder(cfgPATH)
     cfgDir.execute();
 }
 
-
+//Loads config from file
 function loadConfig() {
-    //Delimiter = |
-
     //Create config if it doesn't exist
-
     var cfgPATH = "~/Documents/LazySort/"
     var cfgDir = new Folder(cfgPATH);
     if (!cfgDir.exists) {
@@ -44,14 +39,14 @@ function loadConfig() {
     if (File(cfgDir.fsName + "/config.txt").exists) {
         $.writeln("config exists already")
     } else {
-        $.writeln("creating default config")
+        //Create Default Config,txt
+        $.writeln("Creating Default Config")
         var cfgFile = new File(cfgDir.fsName + "/config.txt")
         cfgFile.open('w')
-        cfgFile.write('01 Media|.mov .avi .mp4 .m4v\n02 Audio|.mp3 .wav\n03 GFX|.jpg .png .psd .gif')
+        cfgFile.write('01 Media|.mov .avi .mp4 .m4v|0\n02 Audio|.mp3 .wav|1\n03 Gfx|.jpg .png .psd .gif|2')
         cfgFile.close();
     }
-    ///////
-
+    //Read config
     var cfgFile = File(cfgDir.fsName + "/config.txt")
     cfgFile.open("r")
     while (!cfgFile.eof) {
@@ -59,24 +54,21 @@ function loadConfig() {
         split = line.split("|")
         binNames.push(split[0])
         binExts = split[1].split(" ")
+        //DEBUG
         $.writeln("binExts: " + binExts.type)
         extensions.push(binExts)
         binLabels.push(split[2])
-
     }
     cfgFile.close()
+    //DEBUG
     $.writeln(binNames)
     $.writeln(extensions)
-    $.writeln("config loaded")
+    $.writeln("config.txt loaded")
 }
 
+//Returns projectItem if bin with name exists already
 function binExistsInRoot(name) {
-    //var projectRoot = app.project.rootItem
-
     for (var j = 0; j < app.project.rootItem.children.numItems; j++) {
-        //$.writeln("Name: "+ name)
-        //$.writeln("prjitemName: "+  app.project.rootItem.children[j].name )
-
         if (app.project.rootItem.children[j].name == name && app.project.rootItem.children[j].type == 2) {
             return app.project.rootItem.children[j]
         }
@@ -84,6 +76,7 @@ function binExistsInRoot(name) {
     return null
 }
 
+//Moves items into bin and conforms moved items if conformflag = true
 function moveToFolder(items, bin, conformLabelColors) {
     binLabel = parseInt(bin.getColorLabel())
     for (var i = 0; i < items.length; i++) {
@@ -94,7 +87,8 @@ function moveToFolder(items, bin, conformLabelColors) {
     }
 }
 
-function lazySort() {
+//Main function
+function lazySort(conformFlag) {
     $.writeln("in lazy sort")
     var projectRoot = app.project.rootItem
 
@@ -131,9 +125,9 @@ function lazySort() {
 
         }
 
-        if (CONFORMLABELFLAG) {
+        if (conformFlag) {
             rootBins[k].setColorLabel(parseInt(binLabels[k]))
         }
-        moveToFolder(itemsToMove, rootBins[k], CONFORMLABELFLAG);
+        moveToFolder(itemsToMove, rootBins[k], conformFlag);
     }
 }
