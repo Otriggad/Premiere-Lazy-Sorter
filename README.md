@@ -1,8 +1,9 @@
 # Lazy Sorter for Premiere Pro
+### Automatically sorts items into desired bins based on file format
 
 ![Lazy Sorter Demo](https://i.imgur.com/50DcsYz.gif)
 
-### Automatically sort items in desired bins
+
 
 ---
 
@@ -22,4 +23,4 @@ Each line holds 3 segments: The bin name, included extensions for said bin and d
 03 Images|.bmp .jpg .png|3
 03 Sequences|$SEQ|4
 ```
-Sequences/Nests can be sorted using string `$SEQ`. MOGRTS and After Effects Compositions can be referenced with `$MOGRT`
+Sequences/Nests can be sorted using string `$SEQ`
