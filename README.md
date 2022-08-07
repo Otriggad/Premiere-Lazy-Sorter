@@ -1,5 +1,7 @@
 # Lazy Sorter for Premiere Pro
 
+![Lazy Sorter Demo](https://i.imgur.com/50DcsYz.gif)
+
 ### Automatically sort items in desired bins
 
 ---
