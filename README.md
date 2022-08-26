@@ -1,7 +1,7 @@
 # Lazy Sorter extension for Premiere Pro
 ### Automatically sorts items into desired bins based on file format
 ---
-### DISCLAIMER this is a proof of concept widget. Use at own risk. Save project progress before sort
+### DISCLAIMER this is a proof of concept extension. Use at own risk. Save project progress before sort!
 ---
 ![Lazy Sorter Demo](https://i.imgur.com/J4V3yxB.gif)
 
