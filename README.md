@@ -1,11 +1,18 @@
 # Lazy Sorter for Premiere Pro
 ### Automatically sorts items into desired bins based on file format
 
+### DISCLAIMER this is a proof of concept widget. Use at own risk. Save project progress before sort
+
 ![Lazy Sorter Demo](https://i.imgur.com/50DcsYz.gif)
 
 
-
 ---
+
+### Installation 
+1. [Download alpha release ZXP](https://github.com/Otriggad/Premiere-Lazy-Sorter/releases/download/v0.1-alpha-preview/lazy-sorter-preview-release_v0.1.zxp)
+2. Install with recommended [ZXP installer](https://aescripts.com/learn/zxp-installer/)
+
+
 
 ### Config file
 
@@ -24,3 +31,7 @@ Each line holds 3 segments: The bin name, included extensions for said bin and d
 03 Sequences|$SEQ|4
 ```
 Sequences/Nests can be sorted using string `$SEQ`
+
+
+### Attribution
+Code is largely based on assets from https://github.com/NTProductions
