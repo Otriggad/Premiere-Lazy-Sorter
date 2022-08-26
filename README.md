@@ -27,8 +27,8 @@ Each line holds 3 segments: The bin name, included extensions for said bin and d
 ```
 01 Video|.mp4 .mov .avi|1
 02 Audio|.mp3 .wav|2
-03 Images|.bmp .jpg .png|3
-03 Sequences|$SEQ|4
+03 GFX|.bmp .jpg .png|3
+04 Sequences|$SEQ|4
 ```
 Sequences/Nests can be sorted using string `$SEQ`
 
