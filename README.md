@@ -1,7 +1,7 @@
 # Lazy Sorter extension for Premiere Pro
 ### Automatically sorts items into desired bins based on file format
 ---
-### DISCLAIMER this is a proof of concept extension. Use at own risk. Save project progress before sort!
+### DISCLAIMER this is a proof of concept extension. Use at your own risk. Save your project progress before sorting!
 ---
 ![Lazy Sorter Demo](https://i.imgur.com/J4V3yxB.gif)
 
@@ -18,7 +18,7 @@
 
 The config.txt file can be modified to your liking and is stored in `~/Documents/LazySort/config.txt`
 
-Each line holds 3 segments: The bin name, included extensions for said bin and desired labelcolor for said bin. Each segment is seperated by symbol `"|"`. The extension list is seperated by `" "` (spaces).
+Each line holds 3 segments: The bin name, included extensions for said bin and desired labelcolor for said bin. Each segment is separated by symbol `"|"`. The extension list is separated by `" "` (spaces).
 
 ![segments](https://i.imgur.com/TmVO1R0.png)
 
